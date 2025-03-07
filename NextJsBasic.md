@@ -37,8 +37,7 @@
 
 > - its also known as <b> Dynamic Rendering (SSR)</b>
 > - In this for every request of client it generates a html page
-
-    and it can very for request to request like for POST , GET , UPDATE , DELETE etc
+and it can very for request to request like for POST , GET , UPDATE , DELETE etc
 
 > - To use SSR for a page we need to <b> export </b> an <b> aysnc </b> function called <b> getServerSideProps </b>. Int this the <b> Async Function </b> is called each time a request is made for the page .
 
