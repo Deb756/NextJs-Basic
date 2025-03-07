@@ -37,7 +37,7 @@
 
 > - its also known as <b> Dynamic Rendering (SSR)</b>
 > - In this for every request of client it generates a html page
-and it can very for request to request like for POST , GET , UPDATE , DELETE etc
+>   and it can very for request to request like for POST , GET , UPDATE , DELETE etc
 
 > - To use SSR for a page we need to <b> export </b> an <b> aysnc </b> function called <b> getServerSideProps </b>. Int this the <b> Async Function </b> is called each time a request is made for the page .
 
@@ -86,6 +86,24 @@ export async function getStaticProps() {
   };
 }
 ```
+
+# Why Next.js Can Be Full-Stack?
+
+- Next.js is primarily a frontend framework built on React, but it includes backend features like:
+- ✅ API Routes – You can create backend APIs within Next.js (like a mini backend).
+- ✅ Server-Side Rendering (SSR) & Static Site Generation (SSG) – Improves SEO and performance.
+- ✅ Database Integration – You can connect to databases (MongoDB, PostgreSQL, MySQL) using ORM tools like Prisma.
+- ✅ Authentication & Middleware – Supports authentication (e.g., NextAuth.js) and middleware for backend logic.
+
+# 🚀 CSR vs SSR Comparison
+
+| Client Side Rendering(CSR)                            | Server side Rendering(SSR)                                |
+| ----------------------------------------------------- | --------------------------------------------------------- |
+| Fster Load                                            | Slow due to Server Processing                             |
+| Its not SEO friendly                                  | Its SEO froendly                                          |
+| Here all the files (related or irrrected are renderd) | Here only specific are rendered as per the Client request |
+| It fetches data on clientside                         | It featches data on server side                           |
+| Its less secured                                      | Its highly secured                                        |
 
 # Steps to create Next.js project
 
