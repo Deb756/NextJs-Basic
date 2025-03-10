@@ -22,6 +22,90 @@
 
 > its simply used to excute the javascript codes.
 
+# What is file based routing in NextJS?
+
+File-based routing in Next.js is a system where the file structure inside the pages/ directory automatically defines the application's routes. Instead of manually setting up routes like in React Router, Next.js generates them based on the file and folder names.
+
+🔹 How It Works:
+Basic Page Routing
+
+Any .js, .jsx, or .tsx file inside the pages/ directory becomes a route.
+
+```bash
+/pages
+  ├── index.js      →  '/'  (Homepage)
+  ├── about.js      →  '/about'
+  ├── contact.js    →  '/contact'
+```
+
+index.js corresponds to the root / route.<br>
+about.js corresponds to /about.<br>
+contact.js corresponds to /contact.
+
+## 1. Dynamic Routing
+
+You can create dynamic routes using square brackets [ ].
+Example:
+
+```bash
+/pages
+  ├── blog
+  │   ├── [id].js   → '/blog/:id' (Dynamic route for blog posts)
+```
+
+A request to /blog/123 will be handled by pages/blog/[id].js.
+
+## 2.Nested Routing
+
+You can organize files into folders to create nested routes.
+Example:
+
+```bash
+/pages
+  ├── products
+  │   ├── index.js  → '/products'
+  │   ├── details.js → '/products/details'
+```
+
+index.js inside products/ maps to /products.<br>
+details.js inside products/ maps to /products/details.
+
+## 3. Catch-All Routes ([...param].js)
+
+Captures multiple segments in a URL.
+Example:
+
+```bash
+/pages
+  ├── blog
+  │   ├── [...slug].js → '/blog/*'
+```
+
+/blog/my-first-post <br>
+/blog/2024/march/new-post
+
+## 4. API Routes (pages/api/)
+
+Files inside pages/api/ become API endpoints.
+Example:
+
+```bash
+/pages
+  ├── api
+  │   ├── hello.js  → API endpoint at `/api/hello`
+```
+
+pages/api/hello.js handles GET requests at /api/hello.
+
+## 🔥 Advantages of File-Based Routing:
+
+- ✅ No need for external routing libraries (like React Router).
+- ✅ Automatic code splitting (each page is loaded only when needed).
+- ✅ SEO-friendly (static and dynamic pages are pre-rendered).
+- ✅ Easier navigation with the <Link> component (next/link).
+
+Would you like a practical example of dynamic routing? 🚀
+
 # What is Js Runtime ?
 
 > There ar two ways that we can execute JS codes i.e
@@ -161,3 +245,7 @@ my-nextjs-app/
 │── README.md              # Project documentation
 
 ```
+# Adding Tailwind 4.0 config 
+
+ ``` npm install -D tailwindcss``` <br>
+ use ``` npx tailwindcss-cli@latest init``` to create the tailwind.config.js file. Updated with verion v4.0.
